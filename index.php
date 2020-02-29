@@ -9,21 +9,27 @@
 	<script src="./js/dialog.js"></script>
 	<script src="./js/sidemenu.js"></script>
 </head>
-<body>
+<body class="grey">
 	<div id="grid_container">
-		<div id="topmenu1_container">topmenu
+		topmenu<br>
+		<div id="horizon_menu_container" class="grey">
+			<ul id="horizon_menu" class="top_grey">
+				<li><div>menu1</div></li>
+				<li><div>menu2</div></li>
+				<li><div>menu3</div></li>
+			</ul>
 		</div>
 		<div id="sidemenu_container">
-			<ul id="sidemenu">sidemenu<br>
+			<ul id="sortable_vertical_menu" class="side_grey">sidemenu<br>
 				<li><div>menu1</div>
-					<ul>
+					<ul class="grey">
 						<li><div>menu1-1</div></li>
 						<li><div>menu1-2</div></li>
 						<li><div>menu1-3</div></li>
 					</ul>
 				</li>
 				<li><div>menu2</div>
-					<ul>
+					<ul class="grey">
 						<li><div>menu2-1</div>
 							<ul>
 								<li><div>menu2-1-1</div></li>
@@ -34,7 +40,7 @@
 					</ul>
 				</li>
 				<li><div>menu3</div>
-					<ul>
+					<ul class="grey">
 						<li><div>menu3-1</div></li>
 						<li><div>menu3-2</div>
 							<ul>
@@ -55,7 +61,10 @@
 	</div>
 </body>
 <script>
-	view_sidemenu("sidemenu");
+	view_sortable_vertical_menu("sortable_vertical_menu");
+	$(function(){
+			$("#horizon_menu").menu();
+});
 </script>
 </html>
 <!--<?php
