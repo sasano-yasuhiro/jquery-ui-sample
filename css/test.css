@@ -1,0 +1,33 @@
+body
+{
+	background: #aaaaaa;
+}
+
+div#grid_container
+{
+	display:grid;
+	grid-template-columns: 10% auto;
+	grid-template-rows: auto auto;
+}
+
+div#topmenu1_container
+{
+	grid-column:1/2;
+	grid-row: 1/2;
+}
+div#topmenu2_container
+{
+	grid-column:2/2;
+	grid-row: 1/2;
+}
+div#sidemenu_container
+{
+	grid-column:1/2;
+	grid-row: 2/2;
+}
+div#contents
+{
+	grid-column:2/2;
+	grid-row: 2/2;
+}
+
