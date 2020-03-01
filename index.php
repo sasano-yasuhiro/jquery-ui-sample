@@ -9,7 +9,7 @@
 	<script src="./js/dialog.js"></script>
 	<script src="./js/sidemenu.js"></script>
 </head>
-<body class="grey">
+<body id="bbb" class="grey">
 	<div id="grid_container">
 		topmenu<br>
 		<div id="horizon_menu_container" class="grey">
@@ -20,12 +20,13 @@
 			</ul>
 		</div>
 		<div id="sidemenu_container">
-			<ul id="sortable_vertical_menu" class="side_grey">sidemenu<br>
-				<li><div>menu1</div>
+			<ul id="vertical_menu" class="side_grey">sidemenu<br>
+				<li><div>dialogs</div>
 					<ul class="grey">
-						<li><div>menu1-1</div></li>
-						<li><div>menu1-2</div></li>
-						<li><div>menu1-3</div></li>
+						<li onclick="view_dialog('dialog_msg', false, false)"><div>メッセージダイアログ</div></li>
+						<li onclick="view_confirm_dialog('dialog_cfm', true, true)"><div>確認ダイアログ</div></li>
+						<li onclick="view_progressbar('dialog_progressbar', 'bar')"><div>プログレスバー</div></li>
+<!--					<li onclick="view_appendto('aaa')"><div>apendto</div></li>-->
 					</ul>
 				</li>
 				<li><div>menu2</div>
@@ -54,19 +55,31 @@
 		</div>
 		<div id="contents">
 			contents
-			<div id="link_dialog">
-				<a href="./php/view/dialogs.php">dialogs</a>
-			</div>
+		</div>
+	</div>
+<!-- ダイアログ -->
+	<div id="message">
+		<div id="dialog_msg" title="メッセージダイアログ" hidden>ここがダイアログに表示される</div>
+	</div>
+	<div id="confirm">
+		<div id="dialog_cfm" title="確認ダイアログ" hidden>dialog_confirm</div>
+	</div>
+	<div id="progressbar">
+		<div id="dialog_progressbar" title="プログレスバー" hidden>
+			dialog_progress
+			<div id="bar"></div>
 		</div>
 	</div>
 </body>
 <script>
-	view_sortable_vertical_menu("sortable_vertical_menu");
-	$(function(){
-			$("#horizon_menu").menu();
-});
+	view_menu("horizon_menu");
+	view_menu("vertical_menu");
+/*function view_appendto(id){
+		$("#bbb").dialog(
+			{
+				appendto:"#"+id
+			}
+		);
+}*/
 </script>
 </html>
-<!--<?php
-echo "test";
-?>-->

@@ -1,4 +1,4 @@
-function view_sortable_vertical_menu(id)
+function view_menu(id)
 {
 	var opt = {};
 	$("#" + id).menu(opt);
