@@ -54,7 +54,15 @@
 			</ul>
 		</div>
 		<div id="contents">
-			contents
+			<div id="contents1" class="ui-widget-content grey">
+				contents1
+			</div>
+			<div id="contents2" class="ui-widget-content grey">
+				contents2
+			</div>
+			<div id="contents3" class="ui-widget-content grey">
+				contents3
+			</div>
 		</div>
 	</div>
 <!-- ダイアログ -->
@@ -74,6 +82,14 @@
 <script>
 	view_menu("horizon_menu");
 	view_menu("vertical_menu");
+	$( function() {
+		$( "#contents1" ).resizable();
+		$( "#contents1" ).draggable();
+		$( "#contents2" ).resizable();
+		$( "#contents2" ).draggable();
+		$( "#contents3" ).resizable();
+		$( "#contents3" ).draggable();
+	} );
 /*function view_appendto(id){
 		$("#bbb").dialog(
 			{

@@ -22,6 +22,7 @@ div#grid_container
 
 div#contents
 {
+	display: flex;
 	grid-column:2/2;
 	grid-row: 2/2;
 }
@@ -34,4 +35,9 @@ div#horizon_menu_container
 ul#horizon_menu
 {
 	display: flex;
+}
+
+div#contents1, #contents2, #contents3
+{
+	width: 50%
 }
